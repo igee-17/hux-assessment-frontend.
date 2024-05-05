@@ -14,7 +14,7 @@ import { FaEye } from "react-icons/fa";
 
 const StatsContainer = () => {
   // const { stats } = useSelector((store) => store.allJobs);
-  const { user, contacts } = useSelector((store) => store.user);
+  const { user, contacts, count } = useSelector((store) => store.user);
 
   const dispatch = useDispatch();
 
@@ -43,7 +43,7 @@ const StatsContainer = () => {
 
     {
       title: "Created today",
-      count: 0,
+      count: count,
       icon: <BiTransfer />,
       color: "#d66a6a",
       bcg: "#ffeeee",
@@ -98,7 +98,7 @@ const StatsContainer = () => {
             })}
           </div>
         ) : (
-          <p>No transactions to display...</p>
+          <p>No contacts to display...</p>
         )}
       </div>
     </Wrapper>

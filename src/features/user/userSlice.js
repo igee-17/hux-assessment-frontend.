@@ -20,7 +20,8 @@ const initialState = {
   user: getUserLocalStorage(),
   paymentIds: getUserLocalStorage()?.paymentIds,
   transactions: [],
-  contacts: []
+  contacts: [],
+  count: 1,
 };
 
 // REGISTER USER
@@ -82,6 +83,9 @@ const userSlice = createSlice({
       state.user = null;
       removeUserLocalStorage();
     },
+    increaseCount: (state) => {
+      state.count += 1;
+    }
   },
   extraReducers: {
     // REGISTER USER
@@ -139,6 +143,7 @@ const userSlice = createSlice({
       state.isLoading = false;
       state.contacts = [...contacts, contact];
       // setUserLocalStorage(user);
+      state.count = state.count + 1
 
       toast.success(`Contact created!`);
     },
@@ -164,20 +169,10 @@ const userSlice = createSlice({
       state.isLoading = false;
       toast.error(`${payload} 💀`);
     },
-    // CLEAR STORE
-    [clearStore.rejected]: () => {
-      toast.error("There was an error...");
-    },
 
-
-
-    // // CLEAR STORE
-    // [clearStore.rejected]: () => {
-    //   toast.error("There was an error...");
-    // },
   },
 });
 
-export const { toggleSidebar, logoutUser } = userSlice.actions;
+export const { toggleSidebar, logoutUser, increaseCount } = userSlice.actions;
 
 export default userSlice.reducer;
