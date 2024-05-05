@@ -1,5 +1,97 @@
-### View in development @ https://skyewallet.netlify.app/
 
+**Dependencies:**
+
+**1. axios (v^1.3.4 or later):**
+
+- **Purpose:** A popular promise-based HTTP client for browser and Node.js environments. It simplifies making asynchronous HTTP requests from your React application to backend APIs or other web services.
+- **Installation:**
+  ```bash
+  npm install axios
+  ```
+  or
+  ```bash
+  yarn add axios
+  ```
+
+**2. moment.js (v^2.29.4 or later):**
+
+- **Purpose:** A powerful library for working with dates and times in JavaScript. It provides a rich set of features for parsing, formatting, manipulating, and displaying dates.
+- **Installation:**
+  ```bash
+  npm install moment
+  ```
+  or
+  ```bash
+  yarn add moment
+  ```
+
+**3. normalize.css (v^8.0.1 or later):**
+
+- **Purpose:** A CSS reset stylesheet that aims to normalize styles across different browsers, providing a consistent baseline for your React application's CSS. It addresses common inconsistencies in box-sizing, margins, padding, fonts, and more.
+- **Installation:**
+  - **Option 1: Download:** Download the `normalize.css` file from [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/) and include it in your main CSS file or import it using a CSS preprocessor like Sass/Less.
+  - **Option 2: Package Manager:** While not strictly necessary to install with a package manager, you can include it in your `package.json` dependencies:
+    ```json
+    {
+      "dependencies": {
+        "normalize.css": "^8.0.1"
+      }
+    }
+    ```
+
+**4. React (v^18.2.0 or later):**
+
+- **Purpose:** The core JavaScript library for building user interfaces with a declarative, component-based approach. It allows you to create reusable UI components that manage their own state and behavior.
+- **Installation:** We recommend using `create-react-app` to set up a new React project, which includes React, react-dom, and other essential tools:
+  ```bash
+  npx create-react-app my-app
+  ```
+  This creates a new project directory `my-app` with React and tools pre-configured.
+
+**5. react-dom (v^18.2.0 or later):**
+
+- **Purpose:** Companion library to React, responsible for rendering React components to a web page's DOM (Document Object Model). It facilitates the interaction between React's virtual DOM and the browser's real DOM.
+- **Installation:** Installed automatically when you install React using `create-react-app`.
+
+**6. react-icons (v^4.8.0 or later):**
+
+- **Purpose:** Provides a collection of SVG icons for use within your React components. It saves you from managing icons manually and offers a wide range of icons across various categories.
+- **Installation:**
+  ```bash
+  npm install react-icons
+  ```
+  or
+  ```bash
+  yarn add react-icons
+  ```
+
+**7. react-redux (v^8.0.5 or later):**
+
+- **Purpose:** Binds React applications to Redux, a predictable state management library. It allows you to manage your application's state in a centralized manner and connect React components to the Redux store.
+- **Installation:**
+  ```bash
+  npm install react-redux
+  ```
+  or
+  ```bash
+  yarn add react-redux
+  ```
+
+**8. react-router-dom (v^6.8.2 or later):**
+
+- **Purpose:** Official routing library for React applications. It allows you to declaratively handle navigation between different views (components) within your app, with features like URL parsing, history management, and component rendering based on the URL.
+- **Installation:**
+  ```bash
+  npm install react-router-dom
+  ```
+  or
+  ```bash
+  yarn add react-router-dom
+  ```
+
+**9. react-scripts (v5.0.1 or later):**
+
+- **Purpose:** Usually part of `create-react-app`. It's a set of scripts that provide a development environment with hot reloading, bundling, and
 
 
 # Getting Started with Create React App
