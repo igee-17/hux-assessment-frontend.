@@ -14,10 +14,10 @@ const Landing = () => {
         {/* info */}
         <div className="info">
           <h1>
-            Phone <span>book</span> App
+            Hub <span>Ventures</span>
           </h1>
           <p>
-            Hub envisions a world where connecting with local businesses and individuals is effortless and accessible to everyone. We aim to create the premier phone book app, revitalizing the concept for the digital age by offering a user-friendly platform that fosters a sense of community and empowers local connections.
+            Hub Ventures envisions a world where connecting with local businesses and individuals is effortless and accessible to everyone. We aim to create the premier phone book app, revitalizing the concept for the digital age by offering a user-friendly platform that fosters a sense of community and empowers local connections.
           </p>
           <Link to="/register" className="btn hero-btn">
             Login/Register

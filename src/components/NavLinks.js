@@ -7,7 +7,7 @@ const NavLinks = ({ toggleSidebar }) => {
       {links.map((link) => {
         const { id, text, path, icon, active } = link;
         return (
-          active ? <NavLink
+          <NavLink
             key={id}
             to={path}
             className={({ isActive }) => {
@@ -17,11 +17,7 @@ const NavLinks = ({ toggleSidebar }) => {
           >
             <span className="icon">{icon}</span>
             {text}
-          </NavLink> :
-            <div className='nav-link' >
-              <span className="icon">{icon}</span>
-              {text}
-            </div>
+          </NavLink>
         );
       })}
     </div>
