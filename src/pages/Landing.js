@@ -14,12 +14,10 @@ const Landing = () => {
         {/* info */}
         <div className="info">
           <h1>
-            Skye <span>Wallet</span> App
+            Phone <span>book</span> App
           </h1>
           <p>
-            At Skye Wallet our vision is to connect Africa to the growing and
-            fast evolving global financial services economy through the use of
-            digital currency.
+            Hub envisions a world where connecting with local businesses and individuals is effortless and accessible to everyone. We aim to create the premier phone book app, revitalizing the concept for the digital age by offering a user-friendly platform that fosters a sense of community and empowers local connections.
           </p>
           <Link to="/register" className="btn hero-btn">
             Login/Register
