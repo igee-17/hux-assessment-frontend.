@@ -45,7 +45,6 @@ const SearchContainer = () => {
             labelText="First Name"
             type="text"
             name="firstName"
-            max={true}
             handleChange={handleChange}
 
           />
@@ -53,7 +52,6 @@ const SearchContainer = () => {
             labelText="Last Name"
             type="text"
             name="lastName"
-            max={true}
             handleChange={handleChange}
           />
           <FormRow
