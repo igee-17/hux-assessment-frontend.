@@ -24,7 +24,7 @@ const Wrapper = styled.section`
         /* border: 2px solid blue; */
         background: white;
         display: grid;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(8, 1fr);
         gap: 10px;
         font-size: 12px;
         text-transform: uppercase;
@@ -52,6 +52,13 @@ const Wrapper = styled.section`
           margin: 0 auto;
           font-size:16px
           
+        }
+
+        & button{
+          border: none;
+          background: none;
+          font-size:16px;
+          color: red
         }
 
         p {

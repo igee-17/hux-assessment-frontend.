@@ -96,6 +96,26 @@ export const updateContactThunk = async (path, data, thunkAPI) => {
 };
 
 
+export const deleteContactThunk = async (path, data, thunkAPI) => {
+  try {
+    // Assuming 'user' object contains access token information (e.g., user.accessToken)
+    const { token } = data.user; // Replace with your access token retrieval logic
+
+    // Set authorization header with Bearer token
+    const headers = { Authorization: `Bearer ${token}` };
+
+    const url = `${baseURL}${path}`
+
+    const resp = await axios.delete(url, { headers }); // Pass headers object
+    console.log(resp.data);
+    return resp.data;
+  } catch (error) {
+    console.log(error);
+    return checkForUnauthorizedResponse(error, thunkAPI);
+  }
+};
+
+
 
 export const clearStoreThunk = async (message, thunkAPI) => {
   try {

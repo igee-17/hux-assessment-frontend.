@@ -12,6 +12,7 @@ import {
   getContactsThunk,
   createContactThunk,
   updateContactThunk,
+  deleteContactThunk,
 } from "./thunkFunctions";
 
 const initialState = {
@@ -63,6 +64,16 @@ export const updateContact = createAsyncThunk(
   "user/createContact",
   async (data, thunkAPI) => {
     return updateContactThunk("/user/update-contact", data, thunkAPI);
+  }
+);
+
+
+// DELETE CONTACT
+export const deleteContact = createAsyncThunk(
+  "user/createContact",
+  async (data, thunkAPI) => {
+    const contactId = data.contact.contact_id
+    return deleteContactThunk(`/user/delete-contact/${contactId}`, data, thunkAPI);
   }
 );
 
@@ -160,7 +171,6 @@ const userSlice = createSlice({
       const { contacts } = state
 
       state.isLoading = false;
-      state.contacts = [...contacts, contact];
       // setUserLocalStorage(user);
 
       toast.success(`Contact Updated!`);
@@ -169,7 +179,23 @@ const userSlice = createSlice({
       state.isLoading = false;
       toast.error(`${payload} 💀`);
     },
+    // DELETE CONTACT
+    [deleteContact.pending]: (state) => {
+      state.isLoading = true;
+    },
+    [deleteContact.fulfilled]: (state, { payload }) => {
+      const { contact } = payload;
+      const { contacts } = state
 
+      state.isLoading = false;
+      // setUserLocalStorage(user);
+
+      toast.success(`Contact Updated!`);
+    },
+    [deleteContact.rejected]: (state, { payload }) => {
+      state.isLoading = false;
+      toast.error(`${payload} 💀`);
+    },
   },
 });
 

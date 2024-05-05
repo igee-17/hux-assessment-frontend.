@@ -7,10 +7,11 @@ import { GrMoney } from "react-icons/gr";
 import { BiTransfer } from "react-icons/bi";
 import Wrapper from "../assets/wrappers/StatsContainer";
 import { useDispatch, useSelector } from "react-redux";
-import { getUserContacts } from "../features/user/userSlice";
+import { deleteContact, getUserContacts } from "../features/user/userSlice";
 import { CiEdit } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { FaEye } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const StatsContainer = () => {
   // const { stats } = useSelector((store) => store.allJobs);
@@ -71,6 +72,7 @@ const StatsContainer = () => {
               <p>Phone Number</p>
               <p>edit</p>
               <p>view</p>
+              <p>delete</p>
             </div>
             {contacts.map((item, index) => {
               const {
@@ -93,6 +95,7 @@ const StatsContainer = () => {
                   <p>{phone_number}</p>
                   <p><Link to={`/edit-contact/${contact_id}`}><CiEdit /></Link></p>
                   <p><Link to={`/contact-details/${contact_id}`}><FaEye /></Link></p>
+                  <p><button className="btn-danger" onClick={() => dispatch(deleteContact({ user, contact: item }))}><MdDelete /></button></p>
                 </div>
               );
             })}
